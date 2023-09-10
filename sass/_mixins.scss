@@ -1,0 +1,40 @@
+@mixin main-btn {
+    background-color: $button-color;
+    padding: 22px 56px;
+    box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    line-height: 16px;
+    font-family: $font-raleway;
+    font-weight: 700;
+    color: $main-white-color;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+@mixin h2-titles {
+    font-size: 46px;
+    line-height: 57.5px;
+    font-family: $font-raleway;
+    font-weight: 600;
+    color: $text-dark-color;
+}
+
+@mixin p-subtexts {
+    font-size: 16px;
+    line-height: 23.2px;
+    font-family: $font-raleway;
+    font-weight: 500;
+    color: $main-white-color;
+}
+
+@mixin effects {
+    transition: 0.5s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+}
