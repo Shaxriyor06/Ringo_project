@@ -1,0 +1,74 @@
+@import "../mixins";
+
+.section_service {
+    background-color: $secondary-color;
+
+    .service {
+        padding: 100px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        row-gap: 70px;
+        align-items: center;
+        justify-content: center;
+
+        &__title {
+            @include h2-titles;
+            color: $main-white-color;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        &__tools {
+            max-width: 900px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            row-gap: 72px;
+
+            &-card {
+                width: 265px;
+
+                & p {
+                    font-size: 24px;
+                    line-height: 31.2px;
+                    font-family: $font-raleway;
+                    font-weight: 500;
+                    color: $main-white-color;
+                    opacity: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .service__tools {
+        justify-content: space-evenly;
+
+        &-card {
+            min-width: 200px;
+        }
+    }
+
+    .service__title {
+        @include h2-titles;
+        font-size: 36px !important;
+        line-height: 45px;
+    }
+}
+
+@media (max-width: 576px) {
+    .service__title {
+        font-size: 24px !important;
+    }
+    .service__tools {
+        justify-content: space-between;
+
+        &-card {
+            margin: 0 auto;
+            min-width: 180px !important;
+        }
+    }
+}
