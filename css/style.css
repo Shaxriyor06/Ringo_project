@@ -616,4 +616,127 @@ nav {
     margin: 0 auto;
     min-width: 180px !important;
   }
+}
+.about {
+  max-width: 1360px;
+  text-align: center;
+  padding: 100px 0 140px 0;
+  position: relative;
+}
+.about__title {
+  max-width: 814px;
+  margin: 0 auto;
+  font-size: 36px;
+  line-height: 46.8px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: #282b22;
+}
+.about__content {
+  margin-top: 80px;
+  padding-top: 10px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.about__content-card {
+  max-width: 473px;
+  padding: 35px 60px;
+  display: flex;
+  align-items: flex-start;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+.about__content-card--last {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+.about__content-card p {
+  color: #282b22;
+  opacity: 80%;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  text-align: start;
+}
+.about__picture1 {
+  width: 160px;
+  height: 200px;
+  position: absolute;
+  z-index: -1;
+  top: 60px;
+  left: 0;
+}
+.about__picture2 {
+  width: 160px;
+  height: 200px;
+  z-index: -1;
+  position: absolute;
+  top: 223px;
+  right: 0;
+}
+
+@media (max-width: 992px) {
+  .about {
+    padding: 100px 20px;
+  }
+  .about__picture1, .about__picture2 {
+    display: none;
+  }
+  .about__content {
+    max-width: 960px;
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    justify-content: center;
+  }
+  .about__title {
+    max-width: 600px;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .about__content {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 600px;
+    margin-top: 60px;
+  }
+  .about__content-card {
+    max-width: 271px;
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 576px) {
+  .about {
+    padding: 80px 10px;
+  }
+  .about__title {
+    max-width: 295px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+  }
+  .about__content {
+    max-width: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .about__content-card {
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 30px 10px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .about__content-card p {
+    max-width: 272px;
+  }
+  .about__content-card--last {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
 }/*# sourceMappingURL=style.css.map */
