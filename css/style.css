@@ -431,7 +431,7 @@ nav {
 }
 .basement__cards {
   max-width: 1200px;
-  margin-top: 80px;
+  margin: 80px;
   display: flex;
   align-items: center;
 }
