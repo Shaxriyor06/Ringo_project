@@ -1,0 +1,152 @@
+@import "../mixins";
+
+.basement {
+    padding: 140px 0;
+    text-align: center;
+
+    &__title {
+        @include h2-titles;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    &__cards {
+        max-width: 1200px;
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+
+        &-one {
+            max-width: 363px;
+            padding: 0 25px;
+            text-align: start;
+            border-left: 1px solid rgba(40, 43, 34, 0.432);
+            justify-content: space-between;
+
+            &--last {
+                border-right: 1px solid rgba(40, 43, 34, 0.432);
+            }
+
+            & span,
+            & p {
+                font-size: 24px;
+                line-height: 24px;
+                font-family: $font-raleway;
+                font-weight: 500;
+                color: $text-dark-color;
+                opacity: 50%;
+            }
+
+            & p {
+                opacity: 100%;
+                margin: 60px 0 30px 0;
+            }
+
+            & img {
+                max-width: 333px;
+                width: 100%;
+                height: 320px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .basement {
+        padding: 140px 0 116px 0;
+
+        &__cards {
+            max-width: 960px;
+            flex-wrap: wrap;
+            row-gap: 60px;
+            column-gap: 50px;
+
+            &-one {
+                max-width: 300px;
+                padding: 0 20px;
+
+                &--last {
+                    border-right: none;
+
+                    & p {
+                        margin: 60px 0 30px 0;
+                    }
+                }
+
+                & p {
+                    margin: 60px 0 30px 0;
+                }
+
+                & img {
+                    max-width: 280px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .basement {
+        padding: 100px 20px;
+
+        &__cards {
+            max-width: 600px;
+            flex-wrap: wrap;
+            align-items: center;
+            row-gap: 60px;
+            column-gap: 0;
+
+            &-one {
+                max-width: 300px;
+
+                & img {
+                    max-width: 260px;
+                    width: 100%;
+                }
+
+                & p {
+                    margin: 40px 0 30px 0 !important;
+                }
+
+                &--last {
+                    border-right: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .basement {
+        padding: 80px 0 10px 0;
+
+        &__title {
+            font-size: 28px;
+            line-height: 33.6px;
+        }
+
+        &__cards {
+            flex-wrap: wrap;
+            row-gap: 50px;
+
+            &-one {
+                max-width: 300px;
+                padding: 0;
+                border: none;
+                margin: 0 auto;
+
+                & p {
+                    margin: 20px 0 15px 0 !important;
+                    font-size: 20px;
+                    line-height: 29px;
+                }
+
+                & img {
+                    max-width: 300px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
