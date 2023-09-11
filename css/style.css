@@ -1258,4 +1258,93 @@ nav {
     line-height: 29px;
     font-weight: 500;
   }
+}
+.section-gifts {
+  background-color: rgb(243, 243, 243);
+}
+.section-gifts .gifts {
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-clip-path: circle(68.2% at 50% 50%);
+  clip-path: circle(68.2% at 50% 50%);
+}
+.section-gifts .gifts__content {
+  max-width: 365px;
+  text-align: center;
+}
+.section-gifts .gifts__content-title {
+  font-size: 46px;
+  line-height: 57.5px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: #282b22;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.section-gifts .gifts__content-subtitle {
+  font-size: 16px;
+  line-height: 23.2px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  color: #282b22;
+  opacity: 80%;
+  margin: 23px 0 40px 0;
+}
+.section-gifts .gifts__content-btn {
+  background-color: #ae7b3c;
+  padding: 22px 56px;
+  box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  transition: 0.5s;
+}
+.section-gifts .gifts__content-btn:hover {
+  transform: scale(1.1);
+}
+.section-gifts .gifts__content-btn:active {
+  transform: scale(0.9);
+}
+.section-gifts .gifts__image, .section-gifts .gifts__picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-gifts .gifts__image-text, .section-gifts .gifts__picture-text {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .gifts {
+    justify-content: center;
+  }
+  .gifts__image, .gifts__picture {
+    display: none !important;
+  }
+  .gifts__content {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 576px) {
+  .gifts {
+    width: 100%;
+  }
+  .gifts__content {
+    width: 100%;
+  }
+  .gifts__content-title {
+    font-size: 24px !important;
+    line-height: 32.4px !important;
+    font-weight: 600 !important;
+  }
 }/*# sourceMappingURL=style.css.map */
