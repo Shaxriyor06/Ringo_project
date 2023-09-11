@@ -1,0 +1,198 @@
+@import "../mixins";
+
+.quality {
+    text-align: center;
+
+    &__title {
+        @include h2-titles;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    &__cards {
+        max-width: 1200px;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 50px;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        padding-top: 50px;
+
+        &-content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            text-align: start;
+
+            &-image {
+                width: 50%;
+                padding: 0 40px 40px 40px;
+                position: relative;
+
+                & p {
+                    color: $text-dark-color;
+                    opacity: 30%;
+                    font-size: 24px;
+                    line-height: 24px;
+                    font-family: $font-raleway;
+                    font-weight: 600;
+                    transition: 0.5s;
+
+                    &:hover {
+                        color: #ae7b3c;
+                        opacity: 100%;
+                    }
+                }
+
+                & img {
+                    width: 340px;
+                    height: 240px;
+                    position: absolute;
+                    right: 116px;
+                    bottom: -78px;
+                }
+            }
+
+            &-text {
+                width: 50%;
+                padding: 0 40px 40px 40px;
+                border-left: 1px solid rgba(0, 0, 0, 0.2);
+
+                & h4 {
+                    font-size: 32px;
+                    line-height: 41.6px;
+                    color: $text-dark-color;
+                    font-family: $font-raleway;
+                    font-weight: 600;
+                    transition: 0.5s;
+
+                    &:hover {
+                        color: #ae7b3c;
+                        opacity: 100%;
+                    }
+                }
+
+                & p {
+                    margin-top: 10px;
+                    font-weight: 500;
+                    @include p-subtexts;
+                    color: $text-dark-color;
+                    opacity: 80%;
+
+                    &:hover {
+                        color: #ae7b3c;
+                        opacity: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .quality__cards {
+        max-width: 960px;
+
+        &-content {
+            &-image {
+                & img {
+                    width: 300px;
+                    right: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .quality {
+        &__title {
+            font-size: 36px;
+            line-height: 45px;
+        }
+
+        &__cards {
+            margin-top: 65px;
+
+            &-content {
+                max-width: 600px;
+
+                &-image {
+                    padding: 0 30px 35px 30px;
+
+                    & img {
+                        display: none;
+                    }
+                }
+
+                &-text {
+                    padding: 0 30px 35px 30px;
+
+                    & h4 {
+                        font-size: 28px;
+                        line-height: 36.4px;
+                    }
+
+                    & p {
+                        font-size: 16px;
+                        line-height: 21.6px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .quality {
+        &__title {
+            font-size: 24px;
+            line-height: 32.4px;
+        }
+
+        &__cards {
+            max-width: 300px;
+            margin: 0 auto;
+            margin-top: 20px;
+            padding-top: 10px;
+            row-gap: 15px;
+
+            &-content {
+                max-width: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                column-gap: 15px;
+
+                &-text {
+                    width: 100%;
+                    padding: 30px 0;
+                    border-left: none;
+
+                    & h4 {
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+
+                    & p {
+                        font-size: 16px;
+                        line-height: 21.6px;
+                    }
+                }
+
+                &-image {
+                    width: 10%;
+                    padding: 30px 0;
+
+                    & p {
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+                }
+            }
+        }
+    }
+}
