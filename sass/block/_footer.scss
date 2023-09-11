@@ -1,0 +1,170 @@
+@import "../mixins";
+
+.footer {
+    padding: 104px 0 20px 0;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &-logo {
+            & img {
+                @include effects;
+            }
+
+            &-social {
+                margin-top: 25px;
+                display: flex;
+                align-items: center;
+                column-gap: 12px;
+
+                & p {
+                    font-size: 14px;
+                    line-height: 14px;
+                    font-family: $font-raleway;
+                    font-weight: 500;
+                    color: $text-dark-color;
+                    opacity: 50%;
+                }
+
+                & a {
+                    text-decoration: none;
+                    color: #ae7b3c;
+                }
+            }
+        }
+
+        &-page,
+        &-menu {
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+
+            & a {
+                text-decoration: none;
+                font-size: 16px;
+                line-height: 16px;
+                font-family: $font-raleway;
+                font-weight: 500;
+                color: $text-dark-color;
+            }
+        }
+
+        &-tel {
+            &-numbers {
+                display: flex;
+                align-items: center;
+                column-gap: 8px;
+
+                & a {
+                    text-decoration: none;
+                    font-size: 20px;
+                    line-height: 20px;
+                    font-family: $font-raleway;
+                    font-weight: 600;
+                    color: $secondary-color;
+                }
+            }
+
+            &-btn {
+                @include main-btn;
+                @include effects;
+                margin-top: 31px;
+            }
+        }
+    }
+
+    &__body {
+        margin-top: 100px;
+        padding: 40px 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+        &-title {
+            font-size: 18px;
+            line-height: 18px;
+            font-family: $font-raleway;
+            font-weight: 600;
+            color: $secondary-color;
+        }
+
+        &-content {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            column-gap: 35px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+            & img {
+                height: 30px;
+            }
+        }
+
+        &-ad {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & p {
+                color: $text-dark-color;
+                opacity: 50%;
+                font-size: 14px;
+                line-height: 14px;
+                font-family: $font-raleway;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .footer__body-content {
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        &__head {
+            flex-wrap: wrap;
+            row-gap: 30px;
+            justify-content: space-around;
+
+            &-tel {
+                width: 100%;
+                display: flex;
+                column-gap: 45px;
+                align-items: center;
+                margin-left: 50px;
+
+                &-numbers {
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        &__head {
+            justify-content: left;
+            row-gap: 37px;
+            column-gap: 45px;
+
+            &-logo {
+                width: 100%;
+            }
+
+            &-tel {
+                display: flex;
+                flex-direction: column;
+                margin-left: 0;
+                align-items: start;
+            }
+        }
+    }
+}
