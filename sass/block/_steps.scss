@@ -1,0 +1,98 @@
+@import "../mixins";
+
+.steps {
+    margin: 140px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0 15px 100px 15px;
+    text-align: center;
+
+    &__title {
+        @include h2-titles;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    &__content {
+        margin-top: 80px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        column-gap: 60px;
+
+        &-card {
+            width: 240px;
+            height: 220px;
+            text-align: start;
+            transition: 0.5s linear;
+
+            &:active {
+                transform: rotateY(360deg);
+            }
+
+            & span {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                border: 1px solid rgba(0, 0, 0, 0.3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                line-height: 24px;
+                font-family: $font-raleway;
+                font-weight: 500;
+                color: $text-dark-color;
+                transition: 0.5s;
+
+                &:hover {
+                    background-color: #ae7b3c;
+                    color: $main-white-color;
+                }
+            }
+
+            &-title {
+                font-size: 18px;
+                line-height: 18px;
+                font-family: $font-raleway;
+                font-weight: 500;
+                margin: 35px 0 15px 0;
+            }
+
+            &-subtitle {
+                @include p-subtexts;
+                color: $text-dark-color;
+                opacity: 80%;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .steps {
+        margin: 140px 20px;
+
+        &__content {
+            flex-wrap: wrap;
+            row-gap: 60px;
+            column-gap: 60px;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .steps {
+        margin: 80px 10px;
+
+        &__title {
+            font-size: 24px;
+            line-height: 32.4px;
+        }
+
+        &__content {
+            &-card {
+                width: 300px;
+            }
+        }
+    }
+}
