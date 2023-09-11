@@ -1146,4 +1146,116 @@ nav {
   .steps__content-card {
     width: 300px;
   }
+}
+.slide {
+  margin: 40px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slide__title {
+  font-size: 46px;
+  line-height: 57.5px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: #282b22;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.slide__images {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  position: relative;
+}
+.slide__images span {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: 0.5s;
+}
+.slide__images span:hover {
+  transform: scale(1.1);
+}
+.slide__images span:active {
+  transform: scale(0.9);
+}
+.slide__images-right {
+  right: 300px;
+}
+.slide__images-left {
+  left: 380px;
+}
+.slide__images img {
+  height: 340px;
+}
+.slide__subtext {
+  text-align: start;
+}
+.slide__subtext h4 {
+  margin-top: 30px;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: #282b22;
+}
+.slide__subtext p {
+  font-size: 18px;
+  line-height: 27px;
+  color: #282b22;
+  opacity: 50%;
+  margin-top: 10px;
+}
+
+@media (max-width: 992px) {
+  .slide__images-right {
+    right: 500px;
+  }
+  .slide__images-left {
+    left: 530px;
+  }
+}
+@media (max-width: 768px) {
+  .slide__images-1, .slide__images-3 {
+    display: none;
+  }
+  .slide__images-right {
+    right: 10px;
+  }
+  .slide__images-left {
+    left: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .slide {
+    padding: 0 10px;
+  }
+  .slide__title {
+    font-size: 24px;
+    line-height: 32.4px;
+  }
+  .slide__images img {
+    max-width: 300px;
+    height: 220px !important;
+  }
+  .slide__images span {
+    display: none;
+  }
+  .slide__subtext {
+    text-align: start;
+  }
+  .slide__subtext h4 {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: 500;
+  }
 }/*# sourceMappingURL=style.css.map */
