@@ -1041,6 +1041,12 @@ nav {
     -o-object-position: left;
        object-position: left;
   }
+  .form__image--second img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
   .form__registration-title {
     font-size: 36px;
     line-height: 45px;
@@ -1346,5 +1352,99 @@ nav {
     font-size: 24px !important;
     line-height: 32.4px !important;
     font-weight: 600 !important;
+  }
+}
+.partners {
+  padding: 140px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.partners__title {
+  font-size: 46px;
+  line-height: 57.5px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: #282b22;
+  text-transform: uppercase;
+}
+.partners__content {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.partners__content-card {
+  max-width: 285px;
+  height: 90px;
+  padding: 21px 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: 0.5s linear;
+  transition: 0.5s;
+}
+.partners__content-card:hover {
+  transform: scale(1.1);
+}
+.partners__content-card:active {
+  transform: scale(0.9);
+}
+.partners__arrows {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.partners__arrows span {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.partners__arrows span:hover {
+  transform: scale(1.1);
+}
+.partners__arrows span:active {
+  transform: scale(0.9);
+}
+
+@media (max-width: 992px) {
+  .partners__content-card {
+    max-width: 225px;
+  }
+  .partners__content-card--last {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .partners__content-card {
+    max-width: 290px;
+  }
+  .partners__content-card--third {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .partners__title {
+    font-size: 24px;
+    line-height: 32.4px;
+  }
+  .partners__content-card {
+    max-width: 215px;
+    padding: 14px 27px;
+  }
+  .partners__content-card img {
+    max-width: 110px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -123,6 +123,13 @@
                 object-fit: cover;
                 object-position: left;
             }
+
+            &--second {
+                & img {
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
         }
 
         &__registration {

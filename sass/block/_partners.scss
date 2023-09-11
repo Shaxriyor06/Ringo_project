@@ -1,0 +1,101 @@
+@import "../mixins";
+
+.partners {
+    padding: 140px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        @include h2-titles;
+        text-transform: uppercase;
+    }
+
+    &__content {
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 20px;
+
+        &-card {
+            max-width: 285px;
+            height: 90px;
+            padding: 21px 65px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            transition: 0.5s linear;
+            @include effects;
+        }
+    }
+
+    &__arrows {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+
+        & span {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            background-color: $main-white-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include effects;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .partners {
+        &__content {
+            &-card {
+                max-width: 225px;
+
+                &--last {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .partners {
+        &__content {
+            &-card {
+                max-width: 290px;
+
+                &--third {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .partners {
+        &__title {
+            font-size: 24px;
+            line-height: 32.4px;
+        }
+
+        &__content {
+            &-card {
+                max-width: 215px;
+                padding: 14px 27px;
+
+                & img {
+                    max-width: 110px;
+                }
+            }
+        }
+    }
+}
